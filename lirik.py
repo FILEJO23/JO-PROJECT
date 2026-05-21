@@ -1,0 +1,32 @@
+import sys
+import time
+
+
+def jalanin_lirik():
+    # Ubah lirik lagu dan delay hurufnya sesuai yang kalian mau
+    lirik = [
+        ("Dengar Laraku", 0.09),
+        ("Suara hati ini memanggil namamu", 0.12),
+        ("Karena separuh aku", 0.12),
+        ("Menyentuh laramu", 0.09),
+        ("Semua lukamu t'lah menjadi lirihku", 0.17),
+        ("Kar'na separuh aku", 0.10),
+        ("Dirimu", 0.09),
+    ]
+
+    # Ubah delay dari setiap baris lagu (sesuaikan jumlah)
+    delay = [4.5, 2.6, 3.0, 5.3, 0.6, 4.3, 2.0]
+    # Ubah judul lagu
+    print("\n== Separuh Aku - Noah ==")
+    for i, (baris_lagu, delay_karakter) in enumerate(lirik):
+        for karakter in baris_lagu:
+            print(karakter, end='')
+            sys.stdout.flush()
+            time.sleep(delay_karakter)
+        time.sleep(delay[i])
+        print('')
+    # Ganti nama pembuat
+    print("// Code by king jo")
+
+
+jalanin_lirik()
